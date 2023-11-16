@@ -27,7 +27,7 @@ public class DiscoBox : MonoBehaviour
 	void MoveTheBox()
 	{
 		//Get a new random position within our box
-		moveTo = new Vector3((Random.Range(-maxRange, maxRange)),0,Random.Range(-maxRange, maxRange));
+		moveTo = new Vector3((Random.Range(-maxRange, maxRange)),Random.Range(-maxRange, maxRange), 0);
 
 		if (moveTo.x < (this.transform.position.x + pos_tolerance) && (moveTo.z < (this.transform.position.z + pos_tolerance)))
 		{
