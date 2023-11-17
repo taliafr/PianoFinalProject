@@ -19,7 +19,6 @@ public class BallController : MonoBehaviour {
         rb.velocity = new Vector3(0, -10, 0);
         calculatedGravity = (2 * peakHeight) / Mathf.Pow((bounceDuration / 2), 2);
         Physics.gravity = new Vector3(0f, -calculatedGravity, 0f);
-        //initialSpeed = calculatedGravity * (bounceDuration / 4);
         initialSpeed = Mathf.Sqrt(2 * Mathf.Abs(Physics.gravity.y) * peakHeight);
         rb.velocity = new Vector3(0f, initialSpeed, 0f);
 
@@ -30,7 +29,6 @@ public class BallController : MonoBehaviour {
         float moveLeftRight = Input.GetAxis ("Horizontal");
         float moveForwardBack = Input.GetAxis ("Vertical");
         Vector3 xAcceleration = new Vector3(1, 0, 0) * moveLeftRight * Time.deltaTime * acceleration;
-        // Vector3 yAcceleration = new Vector3(0, 1, 0) * acceleration;
         Vector3 zAceleration = new Vector3(0, 0, 1) * moveForwardBack * Time.deltaTime * acceleration;
         rb.velocity += xAcceleration + zAceleration;
     }
