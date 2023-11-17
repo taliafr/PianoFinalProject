@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class globalTiles : MonoBehaviour
 {
+
+    // want to change so that correct tile and next tile is iterating based on player collision
+
     public Tile currentTile; //handled by player --> on collision tile becomes currentTile, turn off glow on old currentTile, turn off sound on old currentTile
 
     public Tile correctTile; 
     public Tile nextTile; 
 
     public Tile[] sequence;
-    public float timer; //how much time (seconds) before next note
+
+
+    public float timer; //how much time (seconds) before next note, want to change so that correct tile and next tile is iterating based on player collision
 
     int correctCounter;
     int nextCounter;
