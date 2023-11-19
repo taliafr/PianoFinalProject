@@ -43,5 +43,30 @@ public class BallController : MonoBehaviour {
 
             // Apply the new velocity to the Rigidbody
             rb.velocity = newVelocity;
+
+        if (collision.gameObject.GetComponent<thisTile>() != null)
+        {
+                // Call the Glow method on the Tile script directly
+                thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
+
+                if (tileScript != null)
+                {
+                    tileScript.Glow();
+                }
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<thisTile>() != null)
+        {
+            // Call the Glow method on the Tile script directly
+            thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
+
+            if (tileScript != null)
+            {
+                tileScript.stopGlow();
+            }
+        }
     }
 }
