@@ -25,6 +25,8 @@ public class thisTile : Tile
     Color oldColor;
     Renderer rend;
 
+    private const byte k_MaxByteForOverexposedColor = 191; //internal Unity const
+
     public bool play;
 
     public override void Play()
@@ -58,6 +60,8 @@ public class thisTile : Tile
         rend = GetComponent<Renderer>();
         thisNote = GetComponent<AudioSource>();
         oldColor = rend.material.color;
+        float factor = 8;
+        thisColor = oldColor * factor;
 
     }
 
