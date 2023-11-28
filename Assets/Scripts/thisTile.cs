@@ -18,7 +18,7 @@ using UnityEngine;
 public class thisTile : Tile
 {
 
-    public AudioSource thisNote;
+    private AudioSource thisNote;
 
     public Color thisColor;
 
@@ -29,7 +29,7 @@ public class thisTile : Tile
 
     public override void Play()
     {
-        play = true;
+        thisNote.Play();
     }
 
     public override void Glow()
@@ -45,7 +45,7 @@ public class thisTile : Tile
 
     public override void stopPlay()
     {
-       play = false;
+        thisNote.Stop();
     }
 
     // Start is called before the first frame update
@@ -56,6 +56,7 @@ public class thisTile : Tile
         //Set color and get rendere
      
         rend = GetComponent<Renderer>();
+        thisNote = GetComponent<AudioSource>();
         oldColor = rend.material.color;
 
     }
@@ -64,9 +65,9 @@ public class thisTile : Tile
     void Update()
     {
 
-        if (play == true)
+        /*if (play == true)
         {
          thisNote.Play();
-        }
+        }*/
     }
 }
