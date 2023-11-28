@@ -119,7 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e598cf804c40f468027e4bc796b354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 10
+  acceleration: 4
+  speed: 4
   bounceDuration: 1
   peakHeight: 3
 --- !u!54 &6562898363011947919

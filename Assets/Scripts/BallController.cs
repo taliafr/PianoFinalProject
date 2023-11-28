@@ -4,11 +4,13 @@ using System.Collections;
 public class BallController : MonoBehaviour {
 
     public float acceleration = 10;
+    public float speed;
 
     public float bounceDuration = 0.25f;
     public float peakHeight = 2f;
     private float initialSpeed;
     private float calculatedGravity;
+    
 
 
     private Rigidbody rb;
@@ -26,11 +28,13 @@ public class BallController : MonoBehaviour {
 
     void Update ()
     {
-        float moveLeftRight = Input.GetAxis ("Horizontal");
-        float moveForwardBack = Input.GetAxis ("Vertical");
-        Vector3 xAcceleration = new Vector3(1, 0, 0) * moveLeftRight * Time.deltaTime * acceleration;
-        Vector3 zAceleration = new Vector3(0, 0, 1) * moveForwardBack * Time.deltaTime * acceleration;
-        rb.velocity += xAcceleration + zAceleration;
+        float horizontalInput = Input.GetAxis ("Horizontal");
+        float verticalInput = Input.GetAxis ("Vertical");
+
+        Vector3 newVelocity = rb.velocity;
+        newVelocity.x = horizontalInput * speed;
+        newVelocity.z = verticalInput * speed;
+        rb.velocity = newVelocity;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -53,6 +57,7 @@ public class BallController : MonoBehaviour {
                 {
                     tileScript.Glow();
                 }
+
         }
     }
 
