@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor.Build.Content;
 
 public class BallController : MonoBehaviour {
 
     public float acceleration = 10;
     public float speed;
+    public globalTiles gameManager;
+    
 
     public float bounceDuration = 0.25f;
     public float peakHeight = 2f;
@@ -23,6 +26,8 @@ public class BallController : MonoBehaviour {
         Physics.gravity = new Vector3(0f, -calculatedGravity, 0f);
         initialSpeed = Mathf.Sqrt(2 * Mathf.Abs(Physics.gravity.y) * peakHeight);
         rb.velocity = new Vector3(0f, initialSpeed, 0f);
+        gameManager = FindObjectOfType<globalTiles>();
+        
 
     }
 
@@ -50,13 +55,19 @@ public class BallController : MonoBehaviour {
 
         if (collision.gameObject.GetComponent<thisTile>() != null)
         {
-                // Call the Glow method on the Tile script directly
-                thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
+            if (collision.gameObject.GetComponent<thisTile>() == gameManager.correctTile) {
+                gameManager.AdvanceSequence();
+                gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
 
-                if (tileScript != null)
-                {
-                    tileScript.Glow();
-                }
+            }
+                
+            // Call the Glow method on the Tile script directly
+            thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
+
+            if (tileScript != null)
+            {
+                tileScript.Glow();
+            }
 
         }
     }
