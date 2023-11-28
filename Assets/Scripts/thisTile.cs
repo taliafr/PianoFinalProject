@@ -19,6 +19,7 @@ public class thisTile : Tile
 {
 
     public AudioSource thisNote;
+
     public Color thisColor;
 
     Color oldColor;
@@ -53,6 +54,7 @@ public class thisTile : Tile
         play = false;
 
         //Set color and get rendere
+     
         rend = GetComponent<Renderer>();
         oldColor = rend.material.color;
 
@@ -62,9 +64,9 @@ public class thisTile : Tile
     void Update()
     {
 
-        if (play)
+        if (play == true)
         {
-            thisNote.Play();
+         thisNote.Play();
         }
     }
 }
