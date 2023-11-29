@@ -56,11 +56,11 @@ public class BallController : MonoBehaviour {
 
         if (collision.gameObject.GetComponent<thisTile>() != null)
         {
-            if (collision.gameObject.GetComponent<thisTile>() == gameManager.correctTile) {
+            /*if (collision.gameObject.GetComponent<thisTile>() == gameManager.correctTile) {
                 gameManager.AdvanceSequence();
                 gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
 
-            }
+            }*/
                 
             // Call the Glow method on the Tile script directly
             thisTile tileScript = collision.gameObject.GetComponent<thisTile>();

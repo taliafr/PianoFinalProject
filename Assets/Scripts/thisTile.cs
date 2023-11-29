@@ -31,7 +31,7 @@ public class thisTile : Tile
 
     public override void Play()
     {
-        //thisNote.Play();
+        thisNote.Play();
     }
 
     public override void Glow()
