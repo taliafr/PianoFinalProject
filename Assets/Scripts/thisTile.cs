@@ -31,6 +31,7 @@ public class thisTile : Tile
 
     public override void Play()
     {
+        thisNote = GetComponent<AudioSource>();
         thisNote.Play();
     }
 
@@ -69,9 +70,9 @@ public class thisTile : Tile
     void Update()
     {
 
-        if (play == true)
+        /*if (play == true)
         {
          thisNote.Play();
-        }
+        }*/
     }
 }
