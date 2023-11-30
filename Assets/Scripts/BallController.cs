@@ -78,7 +78,19 @@ public class BallController : MonoBehaviour {
 
         //Gameplay and tiles
 
-        if (gameStart)
+        //If the currentTile = the nextTile --> start the game
+        if (collision.gameObject.GetComponent<thisTile>() != null)
+        {
+            gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
+            if(gameManager.currentTile == gameManager.nextTile)
+            {
+                gameStart = true;
+
+            }
+        }
+
+
+            if (gameStart)
 
         {
             if (collision.gameObject.GetComponent<thisTile>() != null)

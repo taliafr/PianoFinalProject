@@ -7,10 +7,10 @@ public class globalTiles : MonoBehaviour
 
     // want to change so that correct tile and next tile is iterating based on player collision
 
-    private Tile currentTile; //handled by player --> on collision tile becomes currentTile, turn off glow on old currentTile, turn off sound on old currentTile
+    public Tile currentTile; //handled by player --> on collision tile becomes currentTile, turn off glow on old currentTile, turn off sound on old currentTile
 
     private Tile correctTile; 
-    private Tile nextTile; 
+    public Tile nextTile; 
 
     public Tile[] sequence;
     public int nextSeqIndex;
@@ -27,13 +27,13 @@ public class globalTiles : MonoBehaviour
     {
         nextCounter = 0;
         nextTile = sequence[nextCounter];
+        nextTile.Glow();
 
 
     }
 
     void Update()
     {
-        nextTile.Glow(); 
         if (correctTile == null) {
 
             correctTile = sequence[0];
