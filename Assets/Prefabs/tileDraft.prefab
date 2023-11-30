@@ -118,6 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d46e0fa972764c8099acdbec3b994ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisNote: {fileID: 0}
   thisColor: {r: 0, g: 0, b: 0, a: 0}
   play: 0
