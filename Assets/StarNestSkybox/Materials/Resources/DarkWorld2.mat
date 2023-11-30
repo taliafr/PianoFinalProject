@@ -28,14 +28,14 @@ Material:
     - _Brightness: -2
     - _CLAMPOUT: 0
     - _CamScroll: 55
-    - _Darkmatter: 179.6
+    - _Darkmatter: 179
     - _Distfading: -70
-    - _Formuparam: 484.4
-    - _Iterations: 12.4
+    - _Formuparam: 450
+    - _Iterations: 10.9
     - _Saturation: 55.9
     - _StepSize: 250
     - _Tile: 565.85
-    - _Volsteps: 11.6
+    - _Volsteps: 10.5
     m_Colors:
     - _Center: {r: -0.1, g: 0.1, b: -0.3, a: -3000}
     - _Color: {r: 0.25627172, g: 0.17511892, b: 0.5808823, a: 1}
