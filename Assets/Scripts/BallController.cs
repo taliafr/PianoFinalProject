@@ -14,6 +14,8 @@ public class BallController : MonoBehaviour {
     public float peakHeight = 2f;
     private float initialSpeed;
     private float calculatedGravity;
+
+    private bool gameStart;
     
 
 
@@ -69,6 +71,14 @@ public class BallController : MonoBehaviour {
             {
                 tileScript.Glow();
                 tileScript.Play();
+            }
+
+            //Game only starts when they move to the first tile
+
+            if (gameStart)
+            {
+                gameManager.AdvanceSequence();
+
             }
 
         }
