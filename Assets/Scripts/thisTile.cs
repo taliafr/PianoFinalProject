@@ -25,35 +25,39 @@ public class thisTile : Tile
     Color oldColor;
     Renderer rend;
 
-    private const byte k_MaxByteForOverexposedColor = 191; //internal Unity const
-
     public bool play;
+    public bool glow;
 
     public override void Play()
     {
         thisNote.Play();
+        play = true;
     }
 
     public override void Glow()
     {
         rend.material.color = thisColor;
+        glow = true;
     }
 
     public override void stopGlow()
     {
         rend.material.color = oldColor;
+        glow = false;
 
     }
 
     public override void stopPlay()
     {
         thisNote.Stop();
+        play = false;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         play = false;
+        glow = false;
 
         //Set color and get rendere
      
@@ -69,9 +73,9 @@ public class thisTile : Tile
     void Update()
     {
 
-        if (play == true)
+        /*if (play == true)
         {
          thisNote.Play();
-        }
+        }*/
     }
 }
