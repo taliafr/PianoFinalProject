@@ -257,7 +257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2665402457750162802, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
       propertyPath: maxIntensity
-      value: 20
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665402457750162802, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
+      propertyPath: minIntensity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7390651429934729656, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
       propertyPath: m_Color.b
@@ -346,7 +350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2665402457750162802, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
       propertyPath: maxIntensity
-      value: 20
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665402457750162802, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
+      propertyPath: minIntensity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7390651429934729656, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
       propertyPath: m_Color.b
@@ -1003,7 +1011,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2665402457750162802, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
       propertyPath: maxIntensity
-      value: 20
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665402457750162802, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
+      propertyPath: minIntensity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7390651429934729656, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
       propertyPath: m_Color.b
@@ -1356,7 +1368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2665402457750162802, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
       propertyPath: maxIntensity
-      value: 20
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665402457750162802, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
+      propertyPath: minIntensity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7390651429934729656, guid: d86f094ab7de84fef81ff619ff7fa171, type: 3}
       propertyPath: m_Intensity
