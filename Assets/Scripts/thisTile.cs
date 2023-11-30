@@ -25,6 +25,8 @@ public class thisTile : Tile
     Color oldColor;
     Renderer rend;
 
+    public float glowItensity;
+
     public bool play;
     public bool glow;
 
@@ -59,14 +61,12 @@ public class thisTile : Tile
     {
         play = false;
         glow = false;
-
         //Set color and get rendere
      
         rend = GetComponent<Renderer>();
         thisNote = GetComponent<AudioSource>();
         oldColor = rend.material.color;
-        float factor = 8;
-        thisColor = oldColor * factor;
+        thisColor = oldColor * glowItensity;
 
     }
 
