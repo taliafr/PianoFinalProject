@@ -16,71 +16,92 @@ public class BallController : MonoBehaviour {
     private float calculatedGravity;
 
     private bool gameStart;
-    
+    private bool gameEnd;
+
+    private bool stopGlow;
+    public float glowTimerBounceVal;
+    private float glowTimerBounce;
+
+
 
 
     private Rigidbody rb;
 
     void Start ()
     {
+        //Ball movement variables
+
         rb = GetComponent<Rigidbody>();
         rb.velocity = new Vector3(0, -10, 0);
         calculatedGravity = (2 * peakHeight) / Mathf.Pow((bounceDuration / 2), 2);
         Physics.gravity = new Vector3(0f, -calculatedGravity, 0f);
         initialSpeed = Mathf.Sqrt(2 * Mathf.Abs(Physics.gravity.y) * peakHeight);
         rb.velocity = new Vector3(0f, initialSpeed, 0f);
+
+        //Tile manager
+
         gameManager = FindObjectOfType<globalTiles>();
+        gameEnd = false;
+        gameStart = false;
         
 
     }
 
     void Update ()
     {
+        //Get key input
+
         float horizontalInput = Input.GetAxis ("Horizontal");
         float verticalInput = Input.GetAxis ("Vertical");
+
+        //Move ball
 
         Vector3 newVelocity = rb.velocity;
         newVelocity.x = horizontalInput * speed;
         newVelocity.z = verticalInput * speed;
         rb.velocity = newVelocity;
+      
     }
 
     void OnCollisionEnter(Collision collision)
     {
-            // Calculate the new velocity after the bounce
-            Vector3 newVelocity = Vector3.Reflect(rb.velocity, collision.contacts[0].normal);
+        //Movement
 
-            // Set the y-component of the new velocity to the initial speed (maintaining constant bounce height)
-            newVelocity.y = initialSpeed;
+        // Calculate the new velocity after the bounce
+        Vector3 newVelocity = Vector3.Reflect(rb.velocity, collision.contacts[0].normal);
 
-            // Apply the new velocity to the Rigidbody
-            rb.velocity = newVelocity;
+        // Set the y-component of the new velocity to the initial speed (maintaining constant bounce height)
+        newVelocity.y = initialSpeed;
 
-        if (collision.gameObject.GetComponent<thisTile>() != null)
+        // Apply the new velocity to the Rigidbody
+        rb.velocity = newVelocity;
+
+        //Gameplay and tiles
+
+        if (gameStart)
+
         {
-            /*if (collision.gameObject.GetComponent<thisTile>() == gameManager.correctTile) {
-                gameManager.AdvanceSequence();
-                gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
-
-            }*/
-                
-            // Call the Glow method on the Tile script directly
-            thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
-
-            if (tileScript != null)
+            if (collision.gameObject.GetComponent<thisTile>() != null)
             {
-                tileScript.Glow();
-                tileScript.Play();
+                /*if (collision.gameObject.GetComponent<thisTile>() == gameManager.correctTile) {
+                    gameManager.AdvanceSequence();
+                    gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
+
+                }*/
+
+                //What tile the ball hit
+
+                thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
+
+                if (tileScript != null)
+                {
+                    //Tile glows and plays
+
+                    tileScript.Glow();
+                    tileScript.Play();
+                }
+
             }
-
-            //Game only starts when they move to the first tile
-
-            if (gameStart)
-            {
-                gameManager.AdvanceSequence();
-
-            }
-
         }
     }
 

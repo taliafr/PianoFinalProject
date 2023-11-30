@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Null
       objectReference: {fileID: 0}
+    - target: {fileID: 6740540277334250829, guid: 18f2ca3b9478f4f549546a3595160dc3, type: 3}
+      propertyPath: glowItensity
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 9151872808173094108, guid: 18f2ca3b9478f4f549546a3595160dc3, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.65401
@@ -800,6 +804,10 @@ PrefabInstance:
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 138.963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330295494472556876, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
+      propertyPath: peakHeight
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
