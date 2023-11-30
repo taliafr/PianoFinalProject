@@ -13,5 +13,5 @@ public class TitleScreenManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(gameSceneName);
-    }
+    } //need to figure out how to end the game and create game boundaries
 }
