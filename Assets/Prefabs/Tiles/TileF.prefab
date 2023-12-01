@@ -119,10 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d46e0fa972764c8099acdbec3b994ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisColor: {r: 0, g: 0, b: 0, a: 0}
+  thisColor: {r: 0.43867922, g: 1, b: 0.495643, a: 0}
   glowItensity: 50
-  play: 0
-  glow: 0
+  play: 1
+  glow: 1
 --- !u!82 &1898865471686811447
 AudioSource:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9727ae2432b914777821b61ab114ec10, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

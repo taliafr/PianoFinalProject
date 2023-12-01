@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5199600650218722276}
   - component: {fileID: 6085825762475597616}
   m_Layer: 0
-  m_Name: TileC 1
+  m_Name: TileD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,10 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d46e0fa972764c8099acdbec3b994ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisColor: {r: 0, g: 0, b: 0, a: 0}
+  thisColor: {r: 0.7735014, g: 0.31011927, b: 0.9528302, a: 0}
   glowItensity: 50
-  play: 0
-  glow: 0
+  play: 1
+  glow: 1
 --- !u!82 &6085825762475597616
 AudioSource:
   m_ObjectHideFlags: 0
@@ -133,8 +133,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1a5ed3e58ac314eff8cb4d0cd6f36b10, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: f44ce56ab84a64f2eb3db6ac8b7aa718, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
