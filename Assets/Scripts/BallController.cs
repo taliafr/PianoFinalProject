@@ -42,7 +42,7 @@ public class BallController : MonoBehaviour {
 
         gameManager = FindObjectOfType<globalTiles>();
         gameEnd = false;
-        gameStart = false;
+        gameStart = true;
         
 
     }
@@ -79,7 +79,7 @@ public class BallController : MonoBehaviour {
         //Gameplay and tiles
 
         //If the currentTile = the nextTile --> start the game
-        if (collision.gameObject.GetComponent<thisTile>() != null)
+        /*if (collision.gameObject.GetComponent<thisTile>() != null)
         {
             gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
             if(gameManager.currentTile == gameManager.nextTile)
@@ -87,32 +87,31 @@ public class BallController : MonoBehaviour {
                 gameStart = true;
 
             }
-        }
+        }*/
 
-
-            if (gameStart)
-
+        thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
+        if (tileScript != null)
         {
-            if (collision.gameObject.GetComponent<thisTile>() != null)
-            {
-                /*if (collision.gameObject.GetComponent<thisTile>() == gameManager.correctTile) {
-                    gameManager.AdvanceSequence();
-                    gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
-
-                }*/
-
-                //What tile the ball hit
-
-                thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
-
-                if (tileScript != null)
-                {
-                    //Tile glows and plays
-                    tileScript.Glow();
-                    tileScript.Play();
-                }
+            gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
+            if (tileScript == gameManager.correctTile) {
+                tileScript.Play();
+                gameManager.AdvanceSequence();
+                //gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
 
             }
+
+            /*//What tile the ball hit
+
+            thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
+
+            if (tileScript != null)
+            {
+                //Tile glows and plays
+                tileScript.Glow();
+                tileScript.Play();
+            }
+            */
+
         }
     }
 
