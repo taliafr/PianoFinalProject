@@ -5,25 +5,19 @@ using UnityEngine;
 public class globalTiles : MonoBehaviour
 {
 
-    // want to change so that correct tile and next tile is iterating based on player collision
+    public Tile currentTile;
 
-    public Tile currentTile; //handled by player --> on collision tile becomes currentTile, turn off glow on old currentTile, turn off sound on old currentTile
+    // The index of the tile that should be glowing (i.e. is next in the sequence)
+    int curSeqIndex;
 
+    // The tile that should be glowing (i.e. is next in the sequence)
     public Tile correctTile; 
-    public Tile nextTile; 
 
+    // The sequence of tiles that make up the song
     public Tile[] sequence;
-    public int nextSeqIndex;
 
-    //public float timer = 100;
-
-
-    //public float timer; //how much time (seconds) before next note, want to change so that correct tile and next tile is iterating based on player collision
-
-    //int correctCounter;
-    //int nextCounter;
-    public bool endGame;
-
+    // Whether or not the final tile has been reached
+    public bool isGameOver;
 
     void Start()
     {
@@ -36,9 +30,8 @@ public class globalTiles : MonoBehaviour
         if (correctTile == null)
         {
             // Starts the sequence by making the first tile glow
-            correctTile = sequence[0];
-            nextTile = sequence[1];
-            nextSeqIndex = 1;
+            curSeqIndex = 0;
+            correctTile = sequence[curSeqIndex];
             correctTile.Glow();
         }
         
@@ -46,14 +39,27 @@ public class globalTiles : MonoBehaviour
 
 
     //Called by player 
-
     public void AdvanceSequence() {
         // Deactivates the tile that has just been correctly bounced on
         correctTile.stopGlow();
         // Activates the next tile in the sequence
-        correctTile = nextTile;
-        correctTile.Glow();
-        nextSeqIndex++;
-        nextTile = sequence[nextSeqIndex];
+        curSeqIndex++;
+        if (curSeqIndex < sequence.Length)
+        {
+            correctTile = sequence[curSeqIndex];
+            correctTile.Glow();
+        }
+        else {
+            if (!isGameOver) {
+                EndGame();
+            }
+            isGameOver = true;
+            
+        }
+
+    }
+
+    // Ends the game, for example, by bringing up a 'Congrats' screen and redirecting to level selection
+    void EndGame() { 
     }
 }
