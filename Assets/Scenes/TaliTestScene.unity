@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.4078631, g: 1.074747, b: 6.47076, a: 1}
+  m_IndirectSpecularColor: {r: 0.20119387, g: 0.13946372, b: 0.8067736, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -162,8 +162,8 @@ MonoBehaviour:
   sequence:
   - {fileID: 9151872809179742290}
   - {fileID: 9151872809279187532}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 9151872808102826860}
+  - {fileID: 9151872809179742290}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -777,7 +777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.8915
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1453,6 +1453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TileG
       objectReference: {fileID: 0}
+    - target: {fileID: 6294201429231937824, guid: 884c450f6a8424b449df8711859687b8, type: 3}
+      propertyPath: glow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8035987530868014830, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.77
@@ -1674,6 +1678,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3749581307902494512, guid: 8245ff177a4fe4d6ebc50da4d998e190, type: 3}
   m_PrefabInstance: {fileID: 8237732409701563608}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9151872808102826860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5014958067334784640, guid: 8245ff177a4fe4d6ebc50da4d998e190, type: 3}
+  m_PrefabInstance: {fileID: 8237732409701563608}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d46e0fa972764c8099acdbec3b994ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9151872808872260893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2890958584041004984, guid: 08d6d638fc2494cacb54ee2ac3ed0384, type: 3}

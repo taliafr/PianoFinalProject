@@ -15,6 +15,8 @@ public class globalTiles : MonoBehaviour
     public Tile[] sequence;
     public int nextSeqIndex;
 
+    public float timer = 100;
+
 
     //public float timer; //how much time (seconds) before next note, want to change so that correct tile and next tile is iterating based on player collision
 
@@ -29,10 +31,9 @@ public class globalTiles : MonoBehaviour
         nextTile = sequence[nextCounter];
         nextTile.Glow();
 
-
     }
 
-    void Update()
+    /*void Update()
     {
         if (correctTile == null) {
 
@@ -42,16 +43,24 @@ public class globalTiles : MonoBehaviour
             correctTile.Glow();
         }
 
-    }
+    }*/
 
     // Update is called once per frame
-    /*
+
     void Update()
     {
-        timer -= Time.deltaTime;
+        /*timer -= Time.deltaTime;
         if (timer <= 0) {
             correctCounter++;
             nextCounter++;
+        }*/
+        if (correctTile == null)
+        {
+
+            correctTile = sequence[0];
+            nextTile = sequence[1];
+            nextSeqIndex = 1;
+            correctTile.Glow();
         }
 
         if (sequence.Length<nextCounter)
@@ -69,7 +78,7 @@ public class globalTiles : MonoBehaviour
         nextTile.Glow();
         
     }
-    */
+
 
     //Called by player 
 

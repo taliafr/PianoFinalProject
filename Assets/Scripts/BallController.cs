@@ -108,7 +108,6 @@ public class BallController : MonoBehaviour {
                 if (tileScript != null)
                 {
                     //Tile glows and plays
-
                     tileScript.Glow();
                     tileScript.Play();
                 }

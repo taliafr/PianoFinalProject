@@ -33,8 +33,8 @@ public class thisTile : Tile
     public override void Play()
     {
         thisNote = GetComponent<AudioSource>();
-        thisNote.Play();
-        play = true;
+       // thisNote.Play();
+        play = true; //why do you change the boolean and call the void method
     }
 
     public override void Glow()
