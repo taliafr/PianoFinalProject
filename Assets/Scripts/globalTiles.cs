@@ -6,6 +6,7 @@ public class globalTiles : MonoBehaviour
 {
 
     public Tile currentTile;
+    public GameObject winMenuUI;
 
     // The index of the tile that should be glowing (i.e. is next in the sequence)
     int curSeqIndex;
@@ -60,6 +61,8 @@ public class globalTiles : MonoBehaviour
     }
 
     // Ends the game, for example, by bringing up a 'Congrats' screen and redirecting to level selection
-    void EndGame() { 
+    void EndGame() {
+        Time.timeScale = 0f; // Stop time
+        winMenuUI.SetActive(true);
     }
 }
