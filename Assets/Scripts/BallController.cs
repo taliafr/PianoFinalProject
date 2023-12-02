@@ -81,7 +81,7 @@ public class BallController : MonoBehaviour {
         }
     }
 
-    void OnCollisionExit(Collision collision)
+    /*void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.GetComponent<thisTile>() != null)
         {
@@ -94,4 +94,5 @@ public class BallController : MonoBehaviour {
             }
         }
     }
+    */
 }
