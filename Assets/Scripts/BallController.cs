@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEditor.Build.Content;
 using System;
+using UnityEngine.SceneManagement;
 
 public class BallController : MonoBehaviour {
 
@@ -14,6 +15,10 @@ public class BallController : MonoBehaviour {
     public float peakHeight = 2f;
     private float initialSpeed;
     private float calculatedGravity;
+
+    public AudioSource wrongTileNoise;
+
+    public GameObject loseMenuUI;
 
     //private bool gameStart;
 
@@ -71,11 +76,18 @@ public class BallController : MonoBehaviour {
         thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
         if (tileScript != null)
         {
-            gameManager.currentTile = collision.gameObject.GetComponent<thisTile>();
-            if (tileScript == gameManager.correctTile && !gameManager.isGameOver) {
+            gameManager.currentTile = tileScript;
+            if (tileScript == gameManager.correctTile && !gameManager.isGameOver)
+            {
                 tileScript.Play();
                 gameManager.AdvanceSequence();
 
+            }
+            // Bounced on the wrong tile
+            else if (tileScript != gameManager.correctTile) {
+                wrongTileNoise.Play();
+                Time.timeScale = 0f; // Stop time
+                loseMenuUI.SetActive(true);
             }
 
         }
