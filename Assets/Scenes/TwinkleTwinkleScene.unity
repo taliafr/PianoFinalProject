@@ -2987,7 +2987,6 @@ MonoBehaviour:
   - {fileID: 1753514976}
   - {fileID: 1753514976}
   - {fileID: 124738088}
-  - {fileID: 124738088}
   - {fileID: 566135328}
   - {fileID: 566135328}
   - {fileID: 1560108486}
@@ -3002,7 +3001,6 @@ MonoBehaviour:
   - {fileID: 1560108486}
   - {fileID: 1560108486}
   - {fileID: 1619901400}
-  - {fileID: 1619901400}
   - {fileID: 780728005}
   - {fileID: 780728005}
   - {fileID: 566135328}
@@ -3010,14 +3008,12 @@ MonoBehaviour:
   - {fileID: 1560108486}
   - {fileID: 1560108486}
   - {fileID: 1619901400}
-  - {fileID: 1619901400}
   - {fileID: 780728005}
   - {fileID: 780728005}
   - {fileID: 566135328}
   - {fileID: 566135328}
   - {fileID: 1560108486}
   - {fileID: 1560108486}
-  - {fileID: 1619901400}
   - {fileID: 1619901400}
   - {fileID: 569629417}
   - {fileID: 569629417}
@@ -3026,14 +3022,12 @@ MonoBehaviour:
   - {fileID: 1579286188}
   - {fileID: 1579286188}
   - {fileID: 124738088}
-  - {fileID: 124738088}
   - {fileID: 566135328}
   - {fileID: 566135328}
   - {fileID: 1560108486}
   - {fileID: 1560108486}
   - {fileID: 1027543715}
   - {fileID: 1027543715}
-  - {fileID: 11527163}
   - {fileID: 11527163}
   isGameOver: 0
 --- !u!4 &1213132355
