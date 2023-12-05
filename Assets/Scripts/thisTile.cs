@@ -30,7 +30,8 @@ public class thisTile : Tile
     public bool play;
     public bool glow;
 
-    public bool isDoubleTile;
+    public bool isDoubleNote;
+    public bool isWholeNote;
 
     public override void Play()
     {

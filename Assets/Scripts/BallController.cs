@@ -18,6 +18,7 @@ public class BallController : MonoBehaviour {
 
     // How many times the doubleTile has been bounced on. 0 is not bounced on, 1 is mid note playing, and 2 means it's over.
     private float doubleTileCount;
+    private float wholeTileCount; // 0 is not bounced, 1 is mid play, 2 is mid play, 3 is mid play, 4 is complete
 
     public AudioSource wrongTileNoise;
 
@@ -83,7 +84,7 @@ public class BallController : MonoBehaviour {
             if (tileScript == gameManager.correctTile && !gameManager.isGameOver)
             {
                 // We just bounced on a normal tile.
-                if (!tileScript.isDoubleTile)
+                if (!tileScript.isDoubleNote && !tileScript.isWholeNote)
                 {
                     tileScript.Play();
                     gameManager.AdvanceSequence();
@@ -91,19 +92,37 @@ public class BallController : MonoBehaviour {
                 // We just bounced on a whole note/ double note tile
                 else
                 {
-                    // Increase the number of bounces that the ball has been on this tile
-                    doubleTileCount++;
-                    // If this is the first bounce, play the sound
-                    if (doubleTileCount == 1)
+                    if (tileScript.isDoubleNote)
                     {
-                        tileScript.Play();
+                        // Increase the number of bounces that the ball has been on this tile
+                        doubleTileCount++;
+                        // If this is the first bounce, play the sound
+                        if (doubleTileCount == 1)
+                        {
+                            tileScript.Play();
+                        }
+                        // If this is the second bounce, do not play anymore sound, and advance the sequence.
+                        else
+                        {
+                            gameManager.AdvanceSequence();
+                            doubleTileCount = 0;
+                        }
                     }
-                    // If this is the second bounce, do not play anymore sound, and advance the sequence.
-                    else
+
+                    if (tileScript.isWholeNote)
                     {
-                        gameManager.AdvanceSequence();
-                        doubleTileCount = 0;
+                        wholeTileCount++;
+                        if (wholeTileCount == 1)
+                        {
+                            tileScript.Play();
+                        }
+                        else
+                        {
+                            gameManager.AdvanceSequence();
+                            wholeTileCount = 0;
+                        }
                     }
+                    
                 }
                 
 
