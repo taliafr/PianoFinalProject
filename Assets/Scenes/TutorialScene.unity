@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b1586aefe96a4e6eb8ac7610d410815, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -930,12 +934,23 @@ PrefabInstance:
     - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e79eded829f264529ad505e471747f35, type: 3}
+      objectReference: {fileID: 8300000, guid: 0b6cdcb8154274df589f6f6dff2e9642, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 884c450f6a8424b449df8711859687b8, type: 3}
+--- !u!114 &377055332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6294201429231937824, guid: 884c450f6a8424b449df8711859687b8, type: 3}
+  m_PrefabInstance: {fileID: 359590560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d46e0fa972764c8099acdbec3b994ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &437369242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1293,7 @@ PrefabInstance:
     - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9727ae2432b914777821b61ab114ec10, type: 3}
+      objectReference: {fileID: 8300000, guid: 4403691c4e6244a1d80395a6fd24a0b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2555,6 +2570,17 @@ MonoBehaviour:
   wrongTileNoise: {fileID: 146524047}
   loseMenuUI: {fileID: 717240955}
   instructionsUI: {fileID: 0}
+--- !u!114 &965478247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6294201429231937824, guid: 884c450f6a8424b449df8711859687b8, type: 3}
+  m_PrefabInstance: {fileID: 454425517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d46e0fa972764c8099acdbec3b994ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &988697975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2581,7 +2607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.89
+      value: -21.35
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2589,7 +2615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.37
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2924,7 +2950,7 @@ PrefabInstance:
     - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b3b515c85dfe1436fb6cb6e6d1675ad1, type: 3}
+      objectReference: {fileID: 8300000, guid: 4bed5c663ff9146b883aee0a9af2c00f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3404,9 +3430,33 @@ MonoBehaviour:
   - {fileID: 2009647547}
   - {fileID: 267384188}
   - {fileID: 508258464}
+  - {fileID: 1792281507}
+  - {fileID: 377055332}
   - {fileID: 865570098}
   - {fileID: 2020856153}
+  - {fileID: 1365471664}
+  - {fileID: 965478247}
+  - {fileID: 965478247}
+  - {fileID: 1365471664}
+  - {fileID: 2020856153}
+  - {fileID: 865570098}
+  - {fileID: 377055332}
+  - {fileID: 1792281507}
+  - {fileID: 508258464}
+  - {fileID: 267384188}
+  - {fileID: 2009647547}
   isGameOver: 0
+--- !u!114 &1365471664 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6294201429231937824, guid: 884c450f6a8424b449df8711859687b8, type: 3}
+  m_PrefabInstance: {fileID: 61953056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d46e0fa972764c8099acdbec3b994ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1389791585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4054,7 +4104,7 @@ PrefabInstance:
     - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: a46e871aca78c4f0391274fb5be9eeda, type: 3}
+      objectReference: {fileID: 8300000, guid: 6dd2fc01764f448a6a76f60ceb68155c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4123,7 +4173,7 @@ PrefabInstance:
     - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7ab743ec0b5c048b582b8c611a216c08, type: 3}
+      objectReference: {fileID: 8300000, guid: ceafd53d8d4a943148299a0d3fca0214, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4340,6 +4390,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775184617}
   m_CullTransparentMesh: 1
+--- !u!114 &1792281507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6294201429231937824, guid: 884c450f6a8424b449df8711859687b8, type: 3}
+  m_PrefabInstance: {fileID: 2014895794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d46e0fa972764c8099acdbec3b994ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1808228741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4403,7 +4464,7 @@ PrefabInstance:
     - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ee1d7a9a4ccee4eee94e19f7b688662b, type: 3}
+      objectReference: {fileID: 8300000, guid: 75710e3c1769a46138d7a73c4528418f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4503,7 +4564,7 @@ PrefabInstance:
     - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7ab743ec0b5c048b582b8c611a216c08, type: 3}
+      objectReference: {fileID: 8300000, guid: daaae2279763d49539117a40d97ccf27, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4716,7 +4777,7 @@ PrefabInstance:
     - target: {fileID: 8361203015996274869, guid: 884c450f6a8424b449df8711859687b8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f44ce56ab84a64f2eb3db6ac8b7aa718, type: 3}
+      objectReference: {fileID: 8300000, guid: eb05fe5f113a24065a15ab44a0579347, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4750,9 +4811,9 @@ SceneRoots:
   - {fileID: 2009647546}
   - {fileID: 1650337929}
   - {fileID: 1808228741}
+  - {fileID: 2014895794}
+  - {fileID: 359590560}
   - {fileID: 1597714780}
   - {fileID: 1038284714}
   - {fileID: 61953056}
   - {fileID: 454425517}
-  - {fileID: 359590560}
-  - {fileID: 2014895794}
