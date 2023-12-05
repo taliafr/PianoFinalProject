@@ -16,6 +16,9 @@ public class BallController : MonoBehaviour {
     private float initialSpeed;
     private float calculatedGravity;
 
+    // How many times the doubleTile has been bounced on. 0 is not bounced on, 1 is mid note playing, and 2 means it's over.
+    private float doubleTileCount;
+
     public AudioSource wrongTileNoise;
 
     public GameObject loseMenuUI;
@@ -74,6 +77,7 @@ public class BallController : MonoBehaviour {
 
         //Gameplay and tiles
         thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
+        DoubleNoteTile doubleTileScript = collision.gameObject.GetComponent<DoubleNoteTile>();
         if (tileScript != null)
         {
             gameManager.currentTile = tileScript;
@@ -84,12 +88,41 @@ public class BallController : MonoBehaviour {
 
             }
             // Bounced on the wrong tile
-            else if (tileScript != gameManager.correctTile) {
+            else if (tileScript != gameManager.correctTile)
+            {
                 wrongTileNoise.Play();
                 Time.timeScale = 0f; // Stop time
                 loseMenuUI.SetActive(true);
             }
 
+        }
+        // We just bounced on a whole note/ double note tile
+        else if (doubleTileScript != null) {
+            gameManager.currentTile = doubleTileScript;
+            if (doubleTileScript == gameManager.correctTile && !gameManager.isGameOver)
+            {
+                // Increase the number of bounces that the ball has been on this tile
+                doubleTileCount++;
+                // If this is the first bounce, play the sound
+                if (doubleTileCount == 1)
+                {
+                    doubleTileScript.Play();
+                }
+                // If this is the second bounce, do not play anymore sound, and advance the sequence.
+                else { 
+                    gameManager.AdvanceSequence();
+                    doubleTileCount = 0;
+                }
+                
+
+            }
+            // Bounced on the wrong tile
+            else if (doubleTileScript != gameManager.correctTile)
+            {
+                wrongTileNoise.Play();
+                Time.timeScale = 0f; // Stop time
+                loseMenuUI.SetActive(true);
+            }
         }
     }
 
