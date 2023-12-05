@@ -112,7 +112,7 @@ public class BallController : MonoBehaviour {
                     if (tileScript.isWholeNote)
                     {
                         wholeTileCount++;
-                        if (wholeTileCount == 1)
+                        if (wholeTileCount == 3)
                         {
                             tileScript.Play();
                         }
