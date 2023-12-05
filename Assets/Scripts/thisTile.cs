@@ -30,6 +30,8 @@ public class thisTile : Tile
     public bool play;
     public bool glow;
 
+    public bool isDoubleTile;
+
     public override void Play()
     {
         thisNote = GetComponent<AudioSource>();

@@ -78,6 +78,7 @@ public class BallController : MonoBehaviour {
         //Gameplay and tiles
         thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
         DoubleNoteTile doubleTileScript = collision.gameObject.GetComponent<DoubleNoteTile>();
+        Debug.Log(tileScript, doubleTileScript);
         if (tileScript != null)
         {
             gameManager.currentTile = tileScript;
@@ -98,6 +99,7 @@ public class BallController : MonoBehaviour {
         }
         // We just bounced on a whole note/ double note tile
         else if (doubleTileScript != null) {
+            Debug.Log("Double tile hit");
             gameManager.currentTile = doubleTileScript;
             if (doubleTileScript == gameManager.correctTile && !gameManager.isGameOver)
             {
