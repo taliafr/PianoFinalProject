@@ -77,15 +77,35 @@ public class BallController : MonoBehaviour {
 
         //Gameplay and tiles
         thisTile tileScript = collision.gameObject.GetComponent<thisTile>();
-        DoubleNoteTile doubleTileScript = collision.gameObject.GetComponent<DoubleNoteTile>();
-        Debug.Log(tileScript, doubleTileScript);
         if (tileScript != null)
         {
             gameManager.currentTile = tileScript;
             if (tileScript == gameManager.correctTile && !gameManager.isGameOver)
             {
-                tileScript.Play();
-                gameManager.AdvanceSequence();
+                // We just bounced on a normal tile.
+                if (!tileScript.isDoubleTile)
+                {
+                    tileScript.Play();
+                    gameManager.AdvanceSequence();
+                }
+                // We just bounced on a whole note/ double note tile
+                else
+                {
+                    // Increase the number of bounces that the ball has been on this tile
+                    doubleTileCount++;
+                    // If this is the first bounce, play the sound
+                    if (doubleTileCount == 1)
+                    {
+                        tileScript.Play();
+                    }
+                    // If this is the second bounce, do not play anymore sound, and advance the sequence.
+                    else
+                    {
+                        gameManager.AdvanceSequence();
+                        doubleTileCount = 0;
+                    }
+                }
+                
 
             }
             // Bounced on the wrong tile
@@ -96,35 +116,6 @@ public class BallController : MonoBehaviour {
                 loseMenuUI.SetActive(true);
             }
 
-        }
-        // We just bounced on a whole note/ double note tile
-        else if (doubleTileScript != null) {
-            Debug.Log("Double tile hit");
-            gameManager.currentTile = doubleTileScript;
-            if (doubleTileScript == gameManager.correctTile && !gameManager.isGameOver)
-            {
-                // Increase the number of bounces that the ball has been on this tile
-                doubleTileCount++;
-                // If this is the first bounce, play the sound
-                if (doubleTileCount == 1)
-                {
-                    doubleTileScript.Play();
-                }
-                // If this is the second bounce, do not play anymore sound, and advance the sequence.
-                else { 
-                    gameManager.AdvanceSequence();
-                    doubleTileCount = 0;
-                }
-                
-
-            }
-            // Bounced on the wrong tile
-            else if (doubleTileScript != gameManager.correctTile)
-            {
-                wrongTileNoise.Play();
-                Time.timeScale = 0f; // Stop time
-                loseMenuUI.SetActive(true);
-            }
         }
     }
 
