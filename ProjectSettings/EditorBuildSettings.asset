@@ -9,14 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: f36a2e2a5097f494888acc2d76cf8fbc
   - enabled: 1
+    path: Assets/Scenes/LevelSelection.unity
+    guid: f8efd71c4c3c7724d9c71742a7453153
+  - enabled: 1
     path: Assets/Scenes/SerafinaScene1.unity
     guid: ab151e0e85df6491996d67f454242614
   - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: 0933333fb6ed7d9438717c663319cf66
+  - enabled: 1
     path: Assets/Scenes/TaliTestScene.unity
     guid: 9d0971fa71bc14e6f98fef5e6a6983f7
-  - enabled: 1
-    path: Assets/Scenes/LevelSelection.unity
-    guid: f8efd71c4c3c7724d9c71742a7453153
   - enabled: 1
     path: Assets/Scenes/TitleScreen2.unity
     guid: 3105c79733067b14db01cb741e775e98

@@ -627,7 +627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Twinkle Twinkle, Little Star
+  m_text: Tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8b76ec0ce424f0469de7c18209cad6d, type: 2}
   m_sharedMaterial: {fileID: 5445725462663208860, guid: e8b76ec0ce424f0469de7c18209cad6d, type: 2}
@@ -873,7 +873,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SerafinaScene1
+          m_StringArgument: TutorialScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &759538575
