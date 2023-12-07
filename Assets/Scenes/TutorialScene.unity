@@ -2565,7 +2565,7 @@ MonoBehaviour:
   acceleration: 7
   speed: 8
   gameManager: {fileID: 0}
-  bounceDuration: 2
+  bounceDuration: 0.91
   peakHeight: 3
   wrongTileNoise: {fileID: 146524047}
   loseMenuUI: {fileID: 717240955}
@@ -2595,15 +2595,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.8516
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.8516
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.8516
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2611,11 +2611,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 90.0961
+      value: 90.62
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.65
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalRotation.w
