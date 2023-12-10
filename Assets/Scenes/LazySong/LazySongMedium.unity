@@ -4722,9 +4722,6 @@ MonoBehaviour:
   winMenuUI: {fileID: 650963176}
   correctTile: {fileID: 0}
   sequence:
-  - {fileID: 1515611535}
-  - {fileID: 1515611535}
-  - {fileID: 1515611535}
   - {fileID: 401234923}
   - {fileID: 1161408272}
   - {fileID: 1161408272}
@@ -6400,43 +6397,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.48
+      value: -21.69
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 92.4573
+      value: 92.55
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.74
+      value: 5.83
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.39746067
+      value: 0.19182006
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.847782
+      value: -0.6760431
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0069968277
+      value: 0.16403319
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.35105792
+      value: -0.6922889
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 221.991
+      value: 181.848
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -53.93399
+      value: -91.841
       objectReference: {fileID: 0}
     - target: {fileID: 8093489439409919663, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 23.043
+      value: 29.184998
       objectReference: {fileID: 0}
     - target: {fileID: 8330295494472556876, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: speed
@@ -6456,7 +6453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8330295494472556876, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: bounceDuration
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8330295494472556876, guid: c0b112851d1f9784db1c127c71381e99, type: 3}
       propertyPath: wrongTileNoise
