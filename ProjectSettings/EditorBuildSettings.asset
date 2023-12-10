@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LazySong/LazySongMedium.unity
     guid: b83ff269ce32a444a9798b71f81b7c0d
+  - enabled: 1
+    path: Assets/Scenes/LazySong/LazySongHard.unity
+    guid: 3a74e28ff73474d5aa7a2b406c5a1942
   m_configObjects: {}

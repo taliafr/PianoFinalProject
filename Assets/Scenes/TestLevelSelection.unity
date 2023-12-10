@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374497e0ab5ec494ea88fc3231309005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!4 &38632351
 Transform:
   m_ObjectHideFlags: 0
