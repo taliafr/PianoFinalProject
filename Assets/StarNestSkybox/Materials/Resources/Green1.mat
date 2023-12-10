@@ -63,6 +63,7 @@ Material:
     m_Floats:
     - _Brightness: 0.1
     - _BumpScale: 1
+    - _CLAMPOUT: 0
     - _CamScroll: 55
     - _Cutoff: 0.5
     - _Darkmatter: 181.8
@@ -71,7 +72,7 @@ Material:
     - _DstBlend: 0
     - _Formuparam: 465.2
     - _Glossiness: 0.5
-    - _Iterations: 15
+    - _Iterations: 11
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -81,7 +82,7 @@ Material:
     - _StepSize: 254.6
     - _Tile: 1194.6
     - _UVSec: 0
-    - _Volsteps: 8
+    - _Volsteps: 8.6
     - _ZWrite: 1
     m_Colors:
     - _Center: {r: 1, g: 0.63, b: 0.8, a: 0}

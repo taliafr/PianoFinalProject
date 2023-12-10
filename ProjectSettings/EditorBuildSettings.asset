@@ -30,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/OdeToJoyScene.unity
     guid: 20405e32fa8f64899b7f548cf47a241a
   - enabled: 1
-    path: Assets/Scenes/TwinkleTwinkleScene.unity
+    path: Assets/Scenes/TwinkleTwinkleSceneEasy.unity
     guid: fdc816081cf2546dd8155e929e78ad26
   m_configObjects: {}

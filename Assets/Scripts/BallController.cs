@@ -11,7 +11,7 @@ public class BallController : MonoBehaviour {
     public globalTiles gameManager;
     
 
-    public float bounceDuration = 0.25f;
+    public float bounceDuration;
     public float peakHeight = 2f;
     private float initialSpeed;
     private float calculatedGravity;
@@ -43,6 +43,7 @@ public class BallController : MonoBehaviour {
 
         //Tile manager
         gameManager = FindObjectOfType<globalTiles>();
+        doubleTileCount = 0;
         //gameStart = true;
         
 
@@ -100,6 +101,7 @@ public class BallController : MonoBehaviour {
                         if (doubleTileCount == 1)
                         {
                             tileScript.Play();
+ 
                         }
                         // If this is the second bounce, do not play anymore sound, and advance the sequence.
                         else

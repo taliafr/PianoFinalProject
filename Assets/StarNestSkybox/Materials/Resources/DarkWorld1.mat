@@ -25,19 +25,20 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Brightness: -1.1
+    - _Brightness: -1.5
+    - _CLAMPOUT: 0
     - _CamScroll: 55
     - _Darkmatter: 105.8
     - _Distfading: 101.7
     - _Formuparam: 907.31
-    - _Iterations: 15
+    - _Iterations: 15.3
     - _Saturation: 72.3
     - _StepSize: 389.6
     - _Tile: 435.2
-    - _Volsteps: 8
+    - _Volsteps: 6
     m_Colors:
     - _Center: {r: -0.1, g: 0.1, b: -0.3, a: -3000}
-    - _Color: {r: 0.5588235, g: 0.13559689, b: 0.13559689, a: 1}
+    - _Color: {r: 0.26415092, g: 0.05357778, b: 0.05357778, a: 1}
     - _Rotation: {r: 0, g: 3, b: 0, a: 0.01}
     - _Scroll: {r: 0.1, g: 0.1, b: -0.3, a: 0}
   m_BuildTextureStacks: []

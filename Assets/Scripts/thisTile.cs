@@ -69,6 +69,7 @@ public class thisTile : Tile
         rend = GetComponent<Renderer>();
         thisNote = GetComponent<AudioSource>();
         oldColor = rend.material.color;
+        glowItensity = 35;
         thisColor = oldColor * glowItensity;
 
     }

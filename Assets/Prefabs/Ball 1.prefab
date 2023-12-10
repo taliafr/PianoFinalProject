@@ -63,7 +63,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &505038910310164990
 MeshRenderer:
@@ -121,8 +121,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 4
   speed: 4
+  gameManager: {fileID: 0}
   bounceDuration: 1
   peakHeight: 3
+  wrongTileNoise: {fileID: 0}
+  loseMenuUI: {fileID: 0}
 --- !u!54 &6562898363011947919
 Rigidbody:
   m_ObjectHideFlags: 0
