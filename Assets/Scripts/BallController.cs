@@ -24,6 +24,12 @@ public class BallController : MonoBehaviour {
 
     public GameObject loseMenuUI;
 
+    public GameObject floor;
+
+    float baseVal;
+
+    bool hasRestart;
+
     //private bool gameStart;
 
 
@@ -45,6 +51,10 @@ public class BallController : MonoBehaviour {
         gameManager = FindObjectOfType<globalTiles>();
         doubleTileCount = 0;
         wholeTileCount = 0;
+
+        baseVal = floor.transform.position.y - 10;
+
+        hasRestart = false;
         //gameStart = true;
         
 
@@ -62,6 +72,16 @@ public class BallController : MonoBehaviour {
         newVelocity.x = horizontalInput * speed;
         newVelocity.z = verticalInput * speed;
         rb.velocity = newVelocity;
+
+        //if the ball is lower than certain y position, end game
+        if (transform.position.y < baseVal)
+        {
+            Restart();
+            hasRestart = true;
+
+        }
+
+        //if(transform.position.y<)
       
     }
 
@@ -133,12 +153,21 @@ public class BallController : MonoBehaviour {
             // Bounced on the wrong tile
             else if (tileScript != gameManager.correctTile)
             {
-                wrongTileNoise.Play();
-                Time.timeScale = 0f; // Stop time
-                loseMenuUI.SetActive(true);
+                Restart();
             }
 
         }
+    }
+
+    void Restart()
+    {
+        if (!hasRestart)
+        {
+            wrongTileNoise.Play();
+        }
+        
+        Time.timeScale = 0f; // Stop time
+        loseMenuUI.SetActive(true);
     }
 
     /*void OnCollisionExit(Collision collision)

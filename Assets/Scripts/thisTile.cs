@@ -17,8 +17,8 @@ using UnityEngine;
 
 public class thisTile : Tile
 {
-
-    private AudioSource thisNote;
+    public AudioSource chord;
+    public AudioSource note;
 
     public Color thisColor;
 
@@ -32,11 +32,21 @@ public class thisTile : Tile
 
     public bool isDoubleNote;
     public bool isWholeNote;
+    public bool isChord;
 
     public override void Play()
     {
-        thisNote = GetComponent<AudioSource>();
-        thisNote.Play();
+
+        if (isChord)
+        {
+            note.Play();
+            chord.Play();
+
+        }
+        else
+        {
+            note.Play();
+        }
         play = true; //why do you change the boolean and call the void method
     }
 
@@ -55,7 +65,7 @@ public class thisTile : Tile
 
     public override void stopPlay()
     {
-        thisNote.Stop();
+        note.Stop();
         play = false;
     }
 
@@ -67,7 +77,9 @@ public class thisTile : Tile
         //Set color and get rendere
      
         rend = GetComponent<Renderer>();
-        thisNote = GetComponent<AudioSource>();
+        note = gameObject.GetComponent<AudioSource>();
+        chord = gameObject.GetComponent<AudioSource>();
+
         oldColor = rend.material.color;
         glowItensity = 35;
         thisColor = oldColor * glowItensity;
