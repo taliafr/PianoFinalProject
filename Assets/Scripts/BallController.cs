@@ -44,6 +44,7 @@ public class BallController : MonoBehaviour {
         //Tile manager
         gameManager = FindObjectOfType<globalTiles>();
         doubleTileCount = 0;
+        wholeTileCount = 0;
         //gameStart = true;
         
 
@@ -114,11 +115,11 @@ public class BallController : MonoBehaviour {
                     if (tileScript.isWholeNote)
                     {
                         wholeTileCount++;
-                        if (wholeTileCount == 3)
+                        if (wholeTileCount == 1)
                         {
                             tileScript.Play();
                         }
-                        else
+                        if(wholeTileCount == 4)
                         {
                             gameManager.AdvanceSequence();
                             wholeTileCount = 0;

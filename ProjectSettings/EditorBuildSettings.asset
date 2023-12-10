@@ -24,12 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen2.unity
     guid: 3105c79733067b14db01cb741e775e98
   - enabled: 1
-    path: Assets/Scenes/MaryHadALittleLamb.unity
+    path: Assets/Scenes/MaryHadALittleLamb/MaryHadALittleLambEasy.unity
     guid: 138344628c66a45609fe0540421f7d18
   - enabled: 1
     path: Assets/Scenes/OdeToJoyScene.unity
     guid: 20405e32fa8f64899b7f548cf47a241a
   - enabled: 1
-    path: Assets/Scenes/TwinkleTwinkleSceneEasy.unity
+    path: Assets/Scenes/TwinkleTwinkle/TwinkleTwinkleSceneEasy.unity
     guid: fdc816081cf2546dd8155e929e78ad26
   m_configObjects: {}

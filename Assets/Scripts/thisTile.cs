@@ -25,7 +25,7 @@ public class thisTile : Tile
     Color oldColor;
     Renderer rend;
 
-    public float glowItensity;
+    private float glowItensity;
 
     public bool play;
     public bool glow;
