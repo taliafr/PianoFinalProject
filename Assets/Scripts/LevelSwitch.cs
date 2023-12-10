@@ -10,7 +10,7 @@ public class LevelSwitch : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
-        /*GameObject dropdownObject = GameObject.Find("DifficultyDropdown");
+        GameObject dropdownObject = GameObject.Find("DifficultyDropdown");
 
         string selectedDifficulty = "Easy";
 
@@ -27,8 +27,8 @@ public class LevelSwitch : MonoBehaviour
             }
         }
         Debug.Log(selectedDifficulty);
-        */
-        //SceneManager.LoadScene(sceneName + selectedDifficulty);
+        
+        SceneManager.LoadScene(sceneName + selectedDifficulty);
         SceneManager.LoadScene(sceneName);
     }
 }

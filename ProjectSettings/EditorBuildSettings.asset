@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SerafinaScene1.unity
     guid: ab151e0e85df6491996d67f454242614
   - enabled: 1
-    path: Assets/Scenes/TutorialScene.unity
+    path: Assets/Scenes/WarmUp/WarmUpEasy.unity
     guid: 0933333fb6ed7d9438717c663319cf66
   - enabled: 1
     path: Assets/Scenes/TaliTestScene.unity
@@ -27,9 +27,27 @@ EditorBuildSettings:
     path: Assets/Scenes/MaryHadALittleLamb/MaryHadALittleLambEasy.unity
     guid: 138344628c66a45609fe0540421f7d18
   - enabled: 1
-    path: Assets/Scenes/OdeToJoyScene.unity
+    path: Assets/Scenes/OdeToJoy/OdeToJoySceneEasy.unity
     guid: 20405e32fa8f64899b7f548cf47a241a
   - enabled: 1
     path: Assets/Scenes/TwinkleTwinkle/TwinkleTwinkleSceneEasy.unity
     guid: fdc816081cf2546dd8155e929e78ad26
+  - enabled: 1
+    path: Assets/Scenes/MaryHadALittleLamb/MaryHadALittleLambHard.unity
+    guid: fd39dbd955068467fa71e9ceedb7d94b
+  - enabled: 1
+    path: Assets/Scenes/MaryHadALittleLamb/MaryHadALittleLambMedium.unity
+    guid: dac7270720b5c48af8eebbc5eb19a784
+  - enabled: 1
+    path: Assets/Scenes/TwinkleTwinkle/TwinkleTwinkleSceneHard.unity
+    guid: 9706d231d30884c36a8ac14406cd2ee5
+  - enabled: 1
+    path: Assets/Scenes/TwinkleTwinkle/TwinkleTwinkleSceneMedium.unity
+    guid: f16341f23b3bc49c2b9e94c4971d2302
+  - enabled: 1
+    path: Assets/Scenes/OdeToJoy/OdeToJoySceneMedium.unity
+    guid: d039831f4a991465e879b706c14df037
+  - enabled: 1
+    path: Assets/Scenes/OdeToJoy/OdeToJoySceneHard.unity
+    guid: a92ac80113f5844bc8a5baaa3c87e363
   m_configObjects: {}
