@@ -28,6 +28,5 @@ public class LevelSwitch : MonoBehaviour
         }
         
         SceneManager.LoadScene(sceneName + selectedDifficulty);
-        //SceneManager.LoadScene(sceneName);
     }
 }

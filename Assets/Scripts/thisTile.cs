@@ -2,19 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//correct tile and next tile changed by global tiles, need to change so that it changes based on player collision 
-//nextTile also changed by timer script -- iterates through same public array of tile objects + 1
-    //if nextTile = thisTile
-        //Tile.Start() -- light up color
-
-//if currTile != corrTile
-    //terminate game
-
-//Tile has glow and no glow functions, play and stop play functions
-
-//Need player to call 
-
-
 public class thisTile : Tile
 {
     public AudioSource chord;
@@ -89,10 +76,5 @@ public class thisTile : Tile
     // Update is called once per frame
     void Update()
     {
-
-        /*if (play == true)
-        {
-         thisNote.Play();
-        }*/
     }
 }
