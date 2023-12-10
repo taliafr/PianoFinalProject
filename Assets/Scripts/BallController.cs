@@ -52,8 +52,9 @@ public class BallController : MonoBehaviour {
         doubleTileCount = 0;
         wholeTileCount = 0;
 
-        baseVal = floor.transform.position.y - 10;
+        baseVal = floor.transform.position.y - 5;
 
+        Time.timeScale = 1f;
         hasRestart = false;
         //gameStart = true;
         

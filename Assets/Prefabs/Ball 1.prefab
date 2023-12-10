@@ -63,7 +63,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &505038910310164990
 MeshRenderer:
@@ -126,6 +126,7 @@ MonoBehaviour:
   peakHeight: 3
   wrongTileNoise: {fileID: 0}
   loseMenuUI: {fileID: 0}
+  floor: {fileID: 919132149155446097, guid: 5e1559b5a1bd7445d8d1c5eabd2e85e7, type: 3}
 --- !u!54 &6562898363011947919
 Rigidbody:
   m_ObjectHideFlags: 0
