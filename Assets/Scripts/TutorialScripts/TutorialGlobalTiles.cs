@@ -45,7 +45,6 @@ public class TutorialGlobalTiles : MonoBehaviour
         // Deactivates the tile that has just been correctly bounced on
         if (curSeqIndex + 1 < sequence.Length && !correctTile.Equals(sequence[curSeqIndex + 1]))
         {
-            Debug.Log("Keep current tile");
             correctTile.stopGlow();
         }
         // Activates the next tile in the sequence

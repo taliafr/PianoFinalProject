@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SerafinaScene1.unity
     guid: ab151e0e85df6491996d67f454242614
   - enabled: 1
-    path: Assets/Scenes/WarmUp/WarmUpEasy.unity
+    path: Assets/Scenes/WarmUp/TutorialEasy.unity
     guid: 0933333fb6ed7d9438717c663319cf66
   - enabled: 1
     path: Assets/Scenes/TaliTestScene.unity
@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OdeToJoy/OdeToJoySceneHard.unity
     guid: a92ac80113f5844bc8a5baaa3c87e363
+  - enabled: 1
+    path: Assets/Scenes/WarmUp/TutorialHard.unity
+    guid: f220f560f63484ecea237a224c0d6fe6
+  - enabled: 1
+    path: Assets/Scenes/WarmUp/TutorialMedium.unity
+    guid: 61b48c01ce6744169a7938d253759bac
   m_configObjects: {}

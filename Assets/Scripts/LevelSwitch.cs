@@ -26,9 +26,8 @@ public class LevelSwitch : MonoBehaviour
                 selectedDifficulty = dropdown.options[selectedIndex].text;
             }
         }
-        Debug.Log(selectedDifficulty);
         
         SceneManager.LoadScene(sceneName + selectedDifficulty);
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
     }
 }
